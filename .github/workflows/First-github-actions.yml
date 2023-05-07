@@ -1,0 +1,8 @@
+name: Python wersion
+on: [push]
+jobs:
+  First-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+    - run: python --version
+    - run: pytest pylint -k test_functional
