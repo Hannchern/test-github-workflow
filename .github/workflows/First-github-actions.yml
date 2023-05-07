@@ -5,4 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: python --version
-    - run: pytest pylint -k test_functional
+    - run: |
+         python -m pip install --upgrade pip
+            pip install pylint
+            pytest pylint -k test_functional
